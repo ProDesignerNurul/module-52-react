@@ -1,10 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Products from './components/Products/Products';
+import Main from './Layout/Main';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+    path: '/', 
+    element: <Main></Main>, 
+    children: [
+      {path: '/', element: <Home></Home>},
+      {path: '/home', element: <Home></Home>},
+      {path: '/about', element: <About></About>},
+    ]},
+    {path: '/products', element: <Products></Products>}
+  ]);
   return (
     <div className="App">
-      <h1>Hello Bangladesh</h1>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
