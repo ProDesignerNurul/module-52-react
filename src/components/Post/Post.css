@@ -1,0 +1,19 @@
+.post{
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 15px;
+}
+.post:hover{
+    box-shadow: 2px 2px 30px gray;
+}
+.post  button{
+    background-color: salmon;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+.post  button:hover{
+    background-color: rgb(255, 17, 0);
+    cursor: pointer;
+}
